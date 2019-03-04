@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+.textBox {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.bg-almond {
+    background: blanchedalmond;
+    padding: 15px;
+}
+
+.navBarPosition {
+    position: fixed! important;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}

@@ -1,0 +1,23 @@
+<form [formGroup]="form">
+    <div class="container bg-almond">
+      <div class= "alert alert-success" *ngIf="showEditMessage">
+        Employee Added Successfully
+      </div>
+      <div class= "alert alert-danger" *ngIf="showDeleteMessage">
+          Employee Deleted Successfully
+        </div>
+      <div><strong>Id</strong></div>
+      <input type="text" formControlName="id"  #id class="textBox">
+      <div><strong> Username</strong></div>
+      <input type="text" formControlName="userName"  #username class="textBox">
+      <div><strong> Job</strong></div>
+      <input type="text" formControlName="job"  #job class="textBox">
+
+      <div>
+        <button type="submit" class="btn btn-primary mt-2 mr-2" (click)="onSubmit(form.value)">Submit</button>
+        <button type="submit" class="btn btn-danger mt-2" (click)="deleteEmployee(form.value)">Delete Employee</button>
+      </div>
+
+      
+    </div>
+  </form> 

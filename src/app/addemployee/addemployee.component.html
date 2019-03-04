@@ -1,0 +1,15 @@
+<form [formGroup]="form">
+  <div class="container bg-almond">
+    <div  *ngIf="showMessage" class="alert alert-success">
+      Employee Added Successfully
+    </div>
+
+    <div><strong>Username</strong></div>
+    <input type="text" formControlName="userName"  #username class="textBox">
+    <div><strong> Job</strong></div>
+    <input type="text" formControlName="job"  #job class="textBox">
+    <div>
+      <button type="submit" class="btn btn-primary mt-2"  [ngClass]="{'disabled': (form.status == 'INVALID') }" (click)="(form.status != 'INVALID') ? clickSubmit(form.value): false">Submit</button>
+    </div>
+  </div>
+</form> 

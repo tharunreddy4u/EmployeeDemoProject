@@ -1,0 +1,64 @@
+
+
+<!--<p *ngIf= "employeeList">
+  {{employeeList.data| json}}
+</p>-->
+<div class="">
+  <div class="container">
+    <div class="row">
+      <h2>Enter one of the search criteria</h2>
+    </div>
+    <div class="row bg-almond">
+      <div class="col">
+        Enter name to search
+        <div class="">
+          <input type="text"[(ngModel)]="searchText" class="textBox" (keyup)= "searchEmployee(searchText)">
+        </div>
+        
+      </div>
+      <div class="col">
+        Enter id to search
+        <div class="">
+          <input type="text"[(ngModel)]="searchId" class="textBox" (keyup)= "searchEmployeeId(searchId)">
+        </div>
+        
+      </div> 
+      <div class="col">
+          Enter Page number
+          <div class="">
+            <input type="text"[(ngModel)]="searchPage" class="textBox" (keyup)= "searchEmployeePage(searchPage)">
+          </div>
+          
+        </div> 
+    </div>
+  </div>
+
+
+    
+    
+
+
+
+  <div *ngIf= "employeeList">
+      <div class="container border border-dark mt-4">
+        <div class= "row border border-dark bg-info text-center">
+            <span class="col-sm-1 border border-dark">Id</span>
+            <span class="col-sm-3 border border-dark">First Name</span>
+            <span class="col-sm-3 border border-dark">Last Name</span>
+            <span class="col-sm-5 border border-dark">Avatar</span>
+        </div>
+        
+        <div *ngFor= "let emp of employeeData" class="row border border-dark text-center">
+          
+            <span scope="row" class="col-sm-1 border border-dashed">{{emp.id}}</span>
+            <span class="col-sm-3 border border-dashed">{{emp.first_name}}</span>
+            <span class="col-sm-3 border border-dashed">{{emp.last_name}}</span>
+            <span class="col-sm-5 border border-dashed"><img src="{{emp.avatar}}" class="rounded-circle"/></span>
+            
+          
+        </div>
+      </div>
+  </div>
+  
+</div>
+
