@@ -64,14 +64,25 @@
   <!--cat daa-->
 <div class="container">
   <div class="">
-    <div *ngFor="let d of catData">
-      {{d.Category.Desc}} 
-      <div *ngFor="let x of d.Category.Items">
-        {{x.Item.PromptForDesc}} - Price {{x.Item.Price}} - Desc {{x.Item.desc}}
+    <div *ngFor="let d of catData" class="mt-5">
+      <b class="">{{d.Category.Desc}} </b>
+      <div class="row mt-4">
+        <div *ngFor="let x of d.Category.Items" class="col-lg-4">
+          <div style="background: gray">
+              <div>Prompt: {{x.Item.PromptForDesc}}</div>
+              <div>Desc : {{x.Item.desc}}</div>
+              <div>Price : {{x.Item.Price}}</div>
+          </div>
+          <div class="mt-2 mb-4">
+            <button class="btn btn-primary" (click)="addItem(x)">Add to Cart</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<app-cart-items [itemsList]="itemList"></app-cart-items>
   
 </div>
 

@@ -4,6 +4,7 @@ import { EmployeelistComponent } from './employeelist/employeelist.component';
 import { AddemployeeComponent } from './addemployee/addemployee.component';
 import { EditemployeeComponent } from './editemployee/editemployee.component';
 import { ResumeComponent } from './resume/resume.component';
+import { CartItemsComponent } from './cart-items/cart-items.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,11 @@ const routes: Routes = [
   {
     path: 'resume',
     component: ResumeComponent,
+  },
+  {
+    path: 'cart',
+    component: CartItemsComponent,
+
   },
   {
     path: '**',

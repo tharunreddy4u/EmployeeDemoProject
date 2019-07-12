@@ -12,6 +12,7 @@ import { EditemployeeComponent } from './editemployee/editemployee.component';
 import { EmployeephotoComponent } from './employeephoto/employeephoto.component';
 import { FooterComponent } from './footer/footer.component';
 import { ResumeComponent } from './resume/resume.component';
+import { CartItemsComponent } from './cart-items/cart-items.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ResumeComponent } from './resume/resume.component';
     EditemployeeComponent,
     EmployeephotoComponent,
     FooterComponent,
-    ResumeComponent
+    ResumeComponent,
+    CartItemsComponent
   ],
   imports: [
     BrowserModule,

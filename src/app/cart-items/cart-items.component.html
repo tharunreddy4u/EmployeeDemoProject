@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let x of itemsList" class="col-lg-12">
+        <div style="background: gray">
+            <div>Prompt: {{x.Item.PromptForDesc}}</div>
+            <div>Desc : {{x.Item.desc}}</div>
+            <div>Price : {{x.Item.Price}}</div>
+        </div>
+    </div>
+  </div>
+
+</div>

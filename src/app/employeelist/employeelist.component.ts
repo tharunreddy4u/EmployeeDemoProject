@@ -16,6 +16,7 @@ export class EmployeelistComponent implements OnInit {
   public searchPage: any;
   public searchId: any;
   public catData: List<any>;
+  public itemList: any = [];
 
   constructor(private employeeListService: Employeeservice) { 
   }
@@ -73,5 +74,12 @@ export class EmployeelistComponent implements OnInit {
     this.searchId = '';
   }  
     
+
+  addItem(item: any) {
+    //console.log("ite val",item)
+    //Object.assign({}, item)
+    this.itemList = this.itemList.concat(item);
+    console.log("item list", this.itemList);
+  }
 
 }
