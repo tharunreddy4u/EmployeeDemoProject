@@ -13,6 +13,7 @@ export class Employeeservice{
   private BASE_URL ='https://reqres.in';
   private GetEmployeeDta = '/api/users';
   private GetEmployeePhoto = '/api/unknown';
+  private GetCategoriesData = './assets/categories.json';
 
   constructor(
     private _http: HttpClient
@@ -26,6 +27,13 @@ export class Employeeservice{
             .get<any>(this.BASE_URL + this.GetEmployeeDta, { responseType: 'json' })
             .pipe(share());
     }
+
+
+  getCategories() : Observable<any> {
+    return this._http
+        .get<any>(this.GetCategoriesData, { responseType: 'json' })
+        .pipe(share());
+} 
 
     //get employee data 1st page
   getUserPage(id: number): Observable<any> {

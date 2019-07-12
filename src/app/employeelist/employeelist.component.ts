@@ -15,6 +15,7 @@ export class EmployeelistComponent implements OnInit {
   public searchText: any;
   public searchPage: any;
   public searchId: any;
+  public catData: List<any>;
 
   constructor(private employeeListService: Employeeservice) { 
   }
@@ -27,6 +28,14 @@ export class EmployeelistComponent implements OnInit {
         this.dupData = res.data;
         
     });
+
+    this.employeeListService.getCategories().subscribe(
+
+      res => {
+        this.catData = res;
+        console.log("categories data",this.catData);
+      }
+    )
   }
 
   searchEmployee(value: any) {

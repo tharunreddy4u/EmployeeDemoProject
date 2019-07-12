@@ -59,6 +59,19 @@
         </div>
       </div>
   </div>
+
+
+  <!--cat daa-->
+<div class="container">
+  <div class="">
+    <div *ngFor="let d of catData">
+      {{d.Category.Desc}} 
+      <div *ngFor="let x of d.Category.Items">
+        {{x.Item.PromptForDesc}} - Price {{x.Item.Price}} - Desc {{x.Item.desc}}
+      </div>
+    </div>
+  </div>
+</div>
   
 </div>
 
